@@ -31,7 +31,7 @@ const employees = [
     reviewRating: 1
   }
 ];
-
+let bonusEmployees = [];
 
 // YOU SHOULD NOT NEED TO CHANGE ANYTHING ABOVE THIS POINT
 
@@ -47,7 +47,9 @@ function bonusCalculator(employeeArray){
   for(let i = 0 ; i < employeeArray.length; i++) {
     let individualEmployee = employeeArray[i];
     console.log(percentage(individualEmployee));
+    bonusEmployees.push(percentage(individualEmployee));
   }
+  console.log(bonusEmployees);
 }
 
 
@@ -110,4 +112,3 @@ function percentage(employee){
 }
 
 bonusCalculator(employees);
-// updating code
