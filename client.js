@@ -1,4 +1,16 @@
+$(document).ready(function(){
+  console.log(bonusEmployees);
 
+  for (let i = 0; i < bonusEmployees.length; i++){
+    $('.container').append('<div></div>');
+    let newDiv = $('.container').children().last();
+    let employee = bonusEmployees[i];
+    newDiv.append('<p>' + employee.name + '</p>');
+    newDiv.append('<p>' + employee.bonusPercentage+ '</p>');
+    newDiv.append('<p>' + employee.totalCompensation+ '</p>');
+    newDiv.append('<p>' + employee.totalBonus+ '</p>');
+  }
+})
 const employees = [
   {
     name: 'Atticus',
@@ -46,14 +58,9 @@ let bonusEmployees = [];
 function bonusCalculator(employeeArray){
   for(let i = 0 ; i < employeeArray.length; i++) {
     let individualEmployee = employeeArray[i];
-    console.log(percentage(individualEmployee));
     bonusEmployees.push(percentage(individualEmployee));
   }
-  console.log(bonusEmployees);
 }
-
-
-//---------------------------------------\\
 
 function percentage(employee){
   let bonusPercentage = 0;
