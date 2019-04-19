@@ -5,10 +5,10 @@ $(document).ready(function(){
     $('.container').append('<div></div>');
     let newDiv = $('.container').children().last();
     let employee = bonusEmployees[i];
-    newDiv.append('<p>' + employee.name + '</p>');
-    newDiv.append('<p>' + employee.bonusPercentage+ '</p>');
-    newDiv.append('<p>' + employee.totalCompensation+ '</p>');
-    newDiv.append('<p>' + employee.totalBonus+ '</p>');
+    newDiv.append('<p>' + 'Name: ' + employee.name + '</p>');
+    newDiv.append('<p>' + 'Bonus Percentage: ' + employee.bonusPercentage+ '</p>');
+    newDiv.append('<p>' + 'Total Compensation: ' + employee.totalCompensation+ '</p>');
+    newDiv.append('<p>' + 'Total Bonus: ' + employee.totalBonus+ '</p>');
   }
 })
 const employees = [
